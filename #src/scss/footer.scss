@@ -1,0 +1,55 @@
+.footer {
+	@include adaptiv-value("margin-top", 130, 50, 1);
+	@include adaptiv-value("margin-bottom", 80, 50, 1);
+	&__wrapper {
+		display: flex;
+		justify-content: center;
+	}
+	&__box {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		max-width: 1000px;
+		@include adaptiv-value("max-width", 1000, 300, 1);
+	}
+	&__title {
+		font-family: 'Segoe UI';
+		font-weight: 400;
+		@include adaptiv-value("font-size", 38, 22, 1);
+		@include adaptiv-value("line-height", 52, 30, 1);
+		text-align: center;
+		@media (max-width:$md4) {
+			text-align: left;
+		}
+	}
+	&__email {
+		font-family: 'Segoe UI';
+		font-weight: 700;
+		@include adaptiv-value("font-size", 60, 30, 1);
+		@include adaptiv-value("line-height", 80, 40, 1);
+		text-align: center;
+		transition: 0.3s;
+		&:hover {
+			@include adaptiv-value("font-size", 62, 32, 1);
+		}
+		@media (max-width:$md4) {
+			text-align: left;
+		}
+		color: #CFA66B;
+		margin-bottom: 100px;
+		@media (max-width:$md4) {
+			margin-bottom: 50px;
+		}
+	}
+	&__subtitle {
+		font-family: 'Segoe UI';
+		font-weight: 700;
+		@include adaptiv-value("font-size", 34, 15, 1);
+		@include adaptiv-value("line-height", 44, 20, 1);
+		text-align: center;
+		color: #E5E5E5;
+		& span {
+			color: #CFA66B;
+		}
+	}
+}
